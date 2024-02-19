@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://rhinolabs.agency" rel="noopener" target="_blank"><img width="150" src="https://storage.googleapis.com/alchemy-next-prod/rhinolabs.png" alt="Rhinolabs logo"></a></p>
+  <a href="https://rhinolabs.agency" rel="noopener" target="_blank"><img width="150" src="https://rhinolabs.agency/assets/logo.png" alt="Rhinolabs logo"></a></p>
 </p>
 
 <h1 align="center" style="border-bottom: none;">Rhinolabs Component Library</h1>

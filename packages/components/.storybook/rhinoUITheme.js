@@ -31,7 +31,7 @@ export default create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'Rhinolabs Design System',
+  brandTitle: 'Rhino-UI Design System',
   brandUrl: '/',
-  brandImage: '/images/logo-rhinolabs.png',
+  brandImage: 'https://rhinolabs.agency/assets/logo.png',
 });
