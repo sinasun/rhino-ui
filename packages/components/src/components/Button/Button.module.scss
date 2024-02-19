@@ -1,4 +1,4 @@
-@import '~@rhino-ui/design-tokens/build/scss/variables-size';
+@import '@rhino-ui/design-tokens/build/scss/variables-size';
 
 @mixin size-xs {
   border-radius: var(--button-size-xs-border-radius, var(--INTERNAL_form-control-size-sm-border-radius));
