@@ -15,7 +15,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const rules = [];
 
-
 // Process all SCSS modules which will be compiled to an index.css
 const extractCssModulesToCss = {
   test: /\.scss$/,
