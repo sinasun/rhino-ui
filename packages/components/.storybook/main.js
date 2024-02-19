@@ -8,6 +8,7 @@ const { resolve } = require('path');
  * and if so, generate additional config options that will get merged into the storybook config
  * in order to process Typescript components and SCSS files appropriately.
  */
+
 const webpackConfig = require('../webpack.config');
 
 module.exports = {
@@ -39,4 +40,5 @@ module.exports = {
     '@storybook/addon-postcss',
     './register',
   ],
+  webpackFinal: webpackConfig
 };

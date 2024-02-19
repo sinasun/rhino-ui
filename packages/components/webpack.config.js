@@ -32,7 +32,6 @@ const injectCssModulesInJS = {
     'sass-loader',
     'postcss-loader',
   ],
-  include: /\.module\.scss$/,
 };
 
 // Process all SCSS modules which will be compiled to an index.css
@@ -86,6 +85,7 @@ const processFonts = {
 if (process.env.IS_STORYBOOK) {
   rules.push(
     { ...injectCssModulesInJS },
+    { ...processFonts },
   );
 }
 
