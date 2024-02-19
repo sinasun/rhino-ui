@@ -4,7 +4,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const pkg = require('./package.json');
 
-const rollupPostCssConfig = (destination) => postcss({
+const rollupPostCssConfig = destination => postcss({
   plugins: [
     autoprefixer(),
     cssnano({
@@ -13,7 +13,7 @@ const rollupPostCssConfig = (destination) => postcss({
   ],
   inject: false,
   // only write out CSS for the first bundle (avoids pointless extra files):
-  extract: destination
+  extract: destination,
 });
 
 const addToConfig = (config, addedItems, configKey) => {
