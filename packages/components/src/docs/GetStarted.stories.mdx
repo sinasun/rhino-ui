@@ -1,0 +1,78 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="About/Get Started" />
+
+# Get Started
+
+### 1. Install
+
+`yarn add @rhinolabs/rhinolabs-components`
+
+or
+
+`npm install @rhinolabs/rhinolabs-components`
+
+### 2. Import Global CSS
+
+```jsx
+@import '@rhinolabs/rhinolabs-components/dist/css/utilities.css';
+@import '@rhinolabs/rhinolabs-components/dist/css/variables.css';
+@import '@rhinolabs/rhinolabs-components/dist/css/index.css';
+```
+
+### 3. Import Global CSS Reset (Optional)
+
+We recommend importing our global reset in order to maintain a consistent
+look of all components across applications.
+
+```jsx
+@import '@rhinolabs/rhinolabs-components/dist/css/reset.css'
+```
+
+### 4. Import Nexa Font (Optional)
+
+We recommend importing our brand font, Nexa, for styling headings, etc.
+
+```jsx
+@import '@rhinolabs/rhinolabs-components/dist/css/fonts';
+```
+
+### 5. Basic Usage
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from '@rhinolabs/rhinolabs-components';
+
+function App() {
+  return <Button>Hello World</Button>;
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+```
+
+### 6. Responsive Hooks & Window size context (Optional)
+
+`rhinolabs-components` provides [responsive hooks]() as well as opinionated [breakpoints]() to make custom responsive layouts
+easier to craft.
+
+In order for these hooks to work, however, they must be provided a context that feeds window size updates via a single listener (for performance reasons).
+use the [`ResponsiveProvider`]() to wrap your application and ensure that responsive hooks have access to the necessary context.
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ResponsiveProvider } from '@rhinolabs/rhinolabs-components';
+
+function App() {
+  return <div>Hello World</div>;
+}
+
+ReactDOM.render(
+  <ResponsiveProvider>
+    <App />
+  </ResponsiveProvider>,
+  document.querySelector('#app')
+);
+```
+
