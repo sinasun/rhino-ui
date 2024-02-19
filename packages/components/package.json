@@ -83,6 +83,8 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.5.16",
+    "@storybook/instrumenter": "6.4.0",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.16",
     "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.9",
