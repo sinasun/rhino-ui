@@ -9,9 +9,10 @@ const { resolve } = require('path');
  * in order to process Typescript components and SCSS files appropriately.
  */
 
-const webpackConfig = require('../webpack.config');
-
 module.exports = {
+  core: {
+    builder: "@storybook/builder-vite"
+  },
   typescript: {
     check: false,
     checkOptions: {},
