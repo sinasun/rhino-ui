@@ -1,5 +1,5 @@
 import { addParameters } from '@storybook/react';
-import rhinolabsTheme from './rhinolabsTheme';
+import rhinoUITheme from "./rhinoUITheme";
 
 require('!style-loader!css-loader!sass-loader!../src/styles/utilities.scss');
 require('!style-loader!css-loader!sass-loader!../src/styles/variables/index.scss');
@@ -8,7 +8,7 @@ require('!style-loader!css-loader!sass-loader!../src/styles/fonts.scss');
 
 addParameters({
   docs: {
-    theme: rhinolabsTheme,
+    theme: rhinoUITheme,
   },
 });
 

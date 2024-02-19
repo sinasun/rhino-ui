@@ -1,7 +1,7 @@
-import sizes from '@rhinolabs/design-tokens/build/json/values/variables-size.json';
-import colors from '@rhinolabs/design-tokens/build/json/values/variables-color.json';
-import assets from '@rhinolabs/design-tokens/build/json/variables-asset.json';
-import { ICON_NAMES as iconNames } from '@rhinolabs/design-tokens/build/icons';
+import sizes from '@rhino-ui/design-tokens/build/json/values/variables-size.json';
+import colors from '@rhino-ui/design-tokens/build/json/values/variables-color.json';
+import assets from '@rhino-ui/design-tokens/build/json/variables-asset.json';
+import { ICON_NAMES as iconNames } from '@rhino-ui/design-tokens/build/icons';
 
 import {
   BorderRadiusSize,

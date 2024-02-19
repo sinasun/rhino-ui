@@ -1,6 +1,6 @@
 {
-  "name": "@rhinolabs/design-tokens",
-  "version": "0.0.0-development",
+  "name": "@rhino-ui/design-tokens",
+  "version": "0.0.1",
   "description": "Design tokens that power all Rhinolabs UIs.",
   "main": "build/index.js",
   "files": [
@@ -13,8 +13,8 @@
     "clean": "rm -rf build",
     "semantic-release": "semantic-release"
   },
-  "repository": "https://github.com/rhinolabs/rhinolabs-design-tokens.git",
-  "author": "Matthew Osborn <matthew.osborn@rhinolabs.ai>",
+  "repository": "https://github.com/rhinolabs/rhino-ui.git",
+  "author": "@rhinolabs",
   "license": "MIT",
   "private": false,
   "peerDependencies": {

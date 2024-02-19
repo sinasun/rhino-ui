@@ -16,7 +16,7 @@ import {
   SpacingSize,
   WidthSize,
   BreakpointSize,
-} from '@rhinolabs/design-tokens/build/types';
+} from '@rhino-ui/design-tokens/build/types';
 
 export type {
   BorderSize,
@@ -35,7 +35,7 @@ export type {
   IconName,
   FontFamily,
   BreakpointSize,
-} from '@rhinolabs/design-tokens/build/types';
+} from '@rhino-ui/design-tokens/build/types';
 
 export type BreakpointSizeWithBase = BreakpointSize | 'base';
 

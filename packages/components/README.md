@@ -21,22 +21,22 @@
 
 ### 1. Install
 
-`yarn add @rhinolabs/rhinolabs-components`
+`yarn add @rhino-ui/components`
 
 ### 2. Import Global CSS
 
 ```jsx
-@import '@rhinolabs/rhinolabs-components/dist/css/utilities.css'; // Utility classes -- REQUIRED
-@import '@rhinolabs/rhinolabs-components/dist/css/variables.css'; // CSS Variables -- REQUIRED
-@import '@rhinolabs/rhinolabs-components/dist/css/index.css'; // Component CSS -- REQUIRED
-@import '@rhinolabs/rhinolabs-components/dist/css/fonts.css'; // Included Font files -- OPTIONAL BUT ENCOURAGED
+@import '@rhino-ui/components/dist/css/utilities.css'; // Utility classes -- REQUIRED
+@import '@rhino-ui/components/dist/css/variables.css'; // CSS Variables -- REQUIRED
+@import '@rhino-ui/components/dist/css/index.css'; // Component CSS -- REQUIRED
+@import '@rhino-ui/components/dist/css/fonts.css'; // Included Font files -- OPTIONAL BUT ENCOURAGED
 ```
 
 We recommend importing our global reset in order to maintain a consistent
 look of all components across applications.
 
 ```jsx
-@import '@rhinolabs/rhinolabs-components/dist/css/reset.css' // A Basic CSS Reset -- OPTIONAL BUT ENCOURAGED.
+@import '@rhino-ui/components/dist/css/reset.css' // A Basic CSS Reset -- OPTIONAL BUT ENCOURAGED.
 ```
 
 ### 3. Usage
@@ -44,7 +44,7 @@ look of all components across applications.
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from '@rhinolabs/rhinolabs-components';
+import { Button } from '@rhino-ui/components';
 
 function App() {
   return <Button>Hello World</Button>;

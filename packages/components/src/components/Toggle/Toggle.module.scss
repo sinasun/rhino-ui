@@ -1,4 +1,4 @@
-@import '~@rhinolabs/design-tokens/build/scss/variables-size';
+@import '~@rhino-ui/design-tokens/build/scss/variables-size';
 
 @mixin thumb-size-sm {
   width: calc(var(--size-spacing-md) - 4px);

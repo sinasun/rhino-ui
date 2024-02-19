@@ -1,5 +1,5 @@
 import React, { FC, forwardRef } from 'react';
-import icons from '@rhinolabs/design-tokens/build/icons/react';
+import icons from '@rhino-ui/design-tokens/build/icons/react';
 import classNames from 'classnames';
 import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
 import {

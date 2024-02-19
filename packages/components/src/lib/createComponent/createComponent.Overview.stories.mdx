@@ -86,7 +86,7 @@ This however can lead to markup that can be hard to read in some cases. Consider
 The most basic markup for this would look like this:
 
 ```jsx
-import { Box } from '@rhinolabs/rhinolabs-components';
+import { Box } from '@rhino-ui/components';
 
 export const App = () => (
   <Box
@@ -166,7 +166,7 @@ export const App = () => (
 The first step toward improving this code is obviously to try and remove duplicate elements so it's easier to parse. We can accomplish it like this:
 
 ```jsx
-import { Box } from '@rhinolabs/rhinolabs-components';
+import { Box } from '@rhino-ui/components';
 
 export const App = () => {
   const columns = ['Column 1', 'Column 2', 'Column 3', 'Column 4'];
@@ -214,7 +214,7 @@ away these containers into their own components.
 
 ```jsx
 // MainContainer.jsx
-import { Box } from '@rhinolabs/rhinolabs-components';
+import { Box } from '@rhino-ui/components';
 
 export const MainContainer = (props) => {
   const {
@@ -252,7 +252,7 @@ export const MainContainer = (props) => {
 };
 
 // Column.jsx
-import { Box } from '@rhinolabs/rhinolabs-components';
+import { Box } from '@rhino-ui/components';
 
 export const Column = (props) => {
   const {
@@ -311,7 +311,7 @@ The `createComponent` utility function allows you to create a custom component o
 we could re-write our code like this:
 
 ```jsx
-import { Box } from '@rhinolabs/rhinolabs-components';
+import { Box } from '@rhino-ui/components';
 
 const MainContainer = createComponent(Box)({
   gap: 'md',

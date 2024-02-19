@@ -39,48 +39,4 @@ module.exports = {
     '@storybook/addon-postcss',
     './register',
   ],
-  webpackFinal: config => {
-    const mdxRule = config.module.rules.find((rule) =>
-      rule.test.test('.story.mdx')
-    );
-    
-    console.log('mdxRule', mdxRule);
-
-    const {
-      options: { remarkPlugins }
-    } = mdxRule.use.find(
-      ({ loader }) => loader === require.resolve('@mdx-js/loader')
-    );
-
-    remarkPlugins.push([
-      codesandbox,
-      {
-        mode: 'iframe',
-        query: {
-          fontsize: 14
-        },
-        customTemplates: {
-          'rhinolabs-components': {
-            extends: `file:${resolve(
-              __dirname,
-              '../docs/codesandbox-template'
-            )}`,
-            entry: 'src/MyComponent.js'
-          },
-        },
-        autoDeploy: true
-      }
-    ]);
-
-    return {
-      ...config,
-      module: {
-        ...config.module,
-        rules: [
-          ...config.module.rules,
-          ...webpackConfig.module.rules,
-        ],
-      },
-    };
-  },
 };

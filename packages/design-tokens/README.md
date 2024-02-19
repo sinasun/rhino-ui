@@ -9,13 +9,13 @@ A central location to store shared attributes of the rhinolabs Design System. Th
 ### Install The package in your project
 
 ```terminal
-npm install @rhinolabs/design-tokens
+npm install @rhino-ui/design-tokens
 ```
 
 or
 
 ```terminal
-yarn add @rhinolabs/design-tokens
+yarn add @rhino-ui/design-tokens
 ```
 
 ### Import tokens into your project based on your platform requirements
@@ -25,28 +25,28 @@ Ideally you'd want to import them into a file that exposes them to your entire a
 SASS Variables imported into a .scss file
 
 ```scss
-@import '~@rhinolabs/design-tokens/build/scss/tokens.scss'
+@import '~@rhino-ui/design-tokens/build/scss/tokens.scss'
 ```
 
 CSS Variables imported into a .css file
 
 ```css
-@import '~@rhinolabs/design-tokens/build/css/tokens.css'
+@import '~@rhino-ui/design-tokens/build/css/tokens.css'
 ```
 
 SASS Utility classes imported into a .scss file
 (NOTE: SCSS and CSS utility classes are the same, we provide both if you wish to maintain consistency in file formats)
 
 ```scss
-@import '~@rhinolabs/design-tokens/build/utilities/utilities-color.scss'
-@import '~@rhinolabs/design-tokens/build/utilities/utilities-size.scss'
+@import '~@rhino-ui/design-tokens/build/utilities/utilities-color.scss'
+@import '~@rhino-ui/design-tokens/build/utilities/utilities-size.scss'
 ```
 
 CSS Utility Classes imported into a .css file
 
 ```css
-@import '~@rhinolabs/design-tokens/build/utilities/utilities-color.css'
-@import '~@rhinolabs/design-tokens/build/utilities/utilities-size.css'
+@import '~@rhino-ui/design-tokens/build/utilities/utilities-color.css'
+@import '~@rhino-ui/design-tokens/build/utilities/utilities-size.css'
 ```
 
 ### Use variables as needed
@@ -72,8 +72,8 @@ The library includes custom svg icons from the design system. They are provided 
 They can be pulled from the build here:
 
 ```text
-@rhinolabs/design-tokens/build/icons/svg // <-- SVG ICONS
-@rhinolabs/design-tokens/build/icons/svg // <-- React Components. NOTE: there is an index file that maps all icons in a dictionary, but they can also be used individually.
+@rhino-ui/design-tokens/build/icons/svg // <-- SVG ICONS
+@rhino-ui/design-tokens/build/icons/svg // <-- React Components. NOTE: there is an index file that maps all icons in a dictionary, but they can also be used individually.
 ```
 
 USING RAW SVGs
@@ -85,10 +85,10 @@ USING RAW SVGs
 USING REACT COMPONENTS
 
 ```react
-import UserIcon from '@rhinolabs/design-tokens/build/icons/react/UserIcon'; <-- Single Icon Import
+import UserIcon from '@rhino-ui/design-tokens/build/icons/react/UserIcon'; <-- Single Icon Import
 
 // or
-import icons from '@rhinolabs/design-tokens/build/icons/react; <-- Icon map
+import icons from '@rhino-ui/design-tokens/build/icons/react; <-- Icon map
 
 const MyUserIcon = icons['user']; <-- Use icon name to.
 
@@ -96,7 +96,7 @@ const MyUserIcon = icons['user']; <-- Use icon name to.
 
 
 // All icon names are documented in the IconName union type.
-import { IconName } from '@rhinolabs/design-tokens/build/types';
+import { IconName } from '@rhino-ui/design-tokens/build/types';
 ```
 
 ## Available Tokens
