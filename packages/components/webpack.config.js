@@ -15,24 +15,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const rules = [];
 
-// Process all SCSS modules which will be compiled inside the main JS bundle.
-const injectCssModulesInJS = {
-  test: /\.scss$/,
-  use: [
-    'style-loader',
-    {
-      loader: 'css-loader',
-      options: {
-        modules: {
-          localIdentName: '[local]__[hash:base64:5]',
-        },
-        sourceMap: true,
-      },
-    },
-    'sass-loader',
-    'postcss-loader',
-  ],
-};
 
 // Process all SCSS modules which will be compiled to an index.css
 const extractCssModulesToCss = {
@@ -77,17 +59,6 @@ const processFonts = {
     },
   ],
 };
-
-// When previewing or building storybook, global CSS is imported
-// via the storybook preview.js, so only modules need to be processed.
-// NOTE: this rule is merged with the rest of the storybook webpack config in
-// .storybook/main.js
-if (process.env.IS_STORYBOOK) {
-  rules.push(
-    { ...injectCssModulesInJS },
-    { ...processFonts },
-  );
-}
 
 // Rules for package publishing.
 // All JS is built with dts/rollup but

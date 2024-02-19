@@ -39,6 +39,6 @@ module.exports = {
     'storybook-addon-mdx-embed',
     '@storybook/addon-postcss',
     './register',
+    '@storybook/preset-scss'
   ],
-  webpackFinal: webpackConfig
 };
