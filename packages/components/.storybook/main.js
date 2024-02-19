@@ -38,7 +38,34 @@ module.exports = {
     'storybook-addon-designs',
     'storybook-addon-mdx-embed',
     '@storybook/addon-postcss',
-    './register',
-    '@storybook/preset-scss'
+    './register'
   ],
+  webpackFinal: async (config) => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: [
+          ...config.module.rules,
+          {
+            test: /\.scss$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: {
+                    localIdentName: '[local]__[hash:base64:5]',
+                  },
+                  sourceMap: true,
+                },
+              },
+              'sass-loader',
+              'postcss-loader',
+            ]
+          }
+        ]
+      }
+    }
+  }
 };
