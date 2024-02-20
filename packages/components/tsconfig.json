@@ -26,6 +26,7 @@
     "jsx": "react",
     // interop between ESM and CJS modules. Recommended by TS
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     // significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS
     "skipLibCheck": true,
@@ -40,7 +41,7 @@
     // This flag is to enable support for a more accurate implementation
     // of how modern JavaScript iterates through new concepts in older JavaScript runtimes.
     "downlevelIteration": true,
-    "target": "es5",
+    "target": "es5"
   },
   "exclude": [
     "src/types/lib.types.ts",

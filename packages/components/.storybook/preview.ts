@@ -2,6 +2,9 @@ import type { Preview } from "@storybook/react";
 import rhinoUITheme from "./rhinoUITheme";
 
 import '../src/styles/utilities.scss';
+import '../src/styles/variables/index.scss';
+import '../src/styles/reset.scss';
+import '../src/styles/fonts.scss';
 
 const preview: Preview = {
   parameters: {

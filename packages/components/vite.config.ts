@@ -10,17 +10,10 @@ export default defineConfig({
     react(),
     dts({ entryRoot: 'src', tsconfigPath: path.join(__dirname, 'tsconfig.json') }),
   ],
-  css: {
-    postcss: {
-      to: path.join(__dirname, 'css'),
-    },
-  },
   build: {
     outDir: './dist',
+    minify: true,
     reportCompressedSize: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
     cssCodeSplit: true,
     lib: {
       entry: {
@@ -34,7 +27,13 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', /@rhino-ui\/.*/],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        assetFileNames: assetInfo => {
+          if (assetInfo.name.endsWith('css')) return `css/${assetInfo.name}`;
+          return assetInfo.name;
+        },
+      },
     },
   },
 });

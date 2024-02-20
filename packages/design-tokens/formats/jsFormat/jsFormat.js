@@ -5,9 +5,12 @@ const jsFormat = {
   name: 'javascript/esm',
   formatter: function (dictionary) {
 
-    const generated = format['javascript/module'](dictionary);
+    const generated = JSON.parse(format['json'](dictionary));
 
-    return generated.replace("module.exports = ", "export default ");
+    return Object.keys(generated).reduce((acc, key) => {
+      return `${acc}\n export const ${key} = ${JSON.stringify(generated[key], null, 2)}`
+    }, '');
+
   }
 }
 
