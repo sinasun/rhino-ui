@@ -7,7 +7,7 @@ const createFileHeader = require('../createFileHeader/createFileHeader');
 const indentLine = require('../indentLine/indentLine');
 
 const BABEL_OPTIONS = {
-  plugins: ['@babel/plugin-transform-react-jsx', '@babel/plugin-transform-modules-commonjs'],
+  plugins: ['@babel/plugin-transform-react-jsx'],
 };
 
 async function createIconComponents() {
