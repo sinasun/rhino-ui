@@ -18,12 +18,6 @@ const preview: Preview = {
     docs: {
       theme: rhinoUITheme,
     },
-    a11y: {
-      element: '#root',
-      config: {},
-      options: {},
-      manual: false,
-    },
     options: {
       storySort: {
         order: [

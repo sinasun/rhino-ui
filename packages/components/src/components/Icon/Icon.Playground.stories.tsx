@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Icon, IconProps } from './Icon';
 import { FONT_SIZE_OPTIONS, FONT_COLOR_OPTIONS, ICON_NAMES } from '../../lib/tokens';
 
-export default {
+const meta: Meta<typeof Icon> = {
   title: 'Components/Icon/Playground',
   component: Icon,
   argTypes: {
@@ -26,9 +26,11 @@ export default {
       },
     },
   },
-} as Meta;
+};
 
-const Template: Story<IconProps> = ({ ...args }) => <Icon {...args} />;
+export default meta;
+
+const Template: StoryFn<IconProps> = ({ ...args }) => <Icon {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

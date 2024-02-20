@@ -1,16 +1,18 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Alert, AlertProps } from './Alert';
 import { ALERT_VARIANTS } from './Alert.constants';
 import { Box } from '../Box/Box';
 import { Heading } from '../Heading/Heading';
 
-export default {
+const meta: Meta<typeof Alert> = {
   title: 'Components/Alert/Visual Regression Tests',
   component: Alert,
-} as Meta;
+};
 
-const Template: Story<AlertProps> = args => (
+export default meta;
+
+const Template: StoryFn<AlertProps> = args => (
   <Box>
     {ALERT_VARIANTS.map(variant => (
       <Alert

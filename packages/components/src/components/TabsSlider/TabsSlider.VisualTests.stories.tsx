@@ -1,14 +1,16 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { TabsSlider, TabsSliderProps } from './TabsSlider';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof TabsSlider> = {
   title: 'Components/TabsSlider/Visual Regression Tests',
   component: TabsSlider,
-} as Meta;
+};
 
-const Template: Story<TabsSliderProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<TabsSliderProps> = ({ ...args }) => (
   <TabsSlider {...args}>
     <TabsSlider.Item>Tab 1</TabsSlider.Item>
     <TabsSlider.Item>Tab 2</TabsSlider.Item>

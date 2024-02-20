@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Card, CardProps } from './Card';
 
-export default {
+const meta: Meta<typeof Card> = {
   title: 'Components/Card/Playground',
   component: Card,
   argTypes: {
@@ -21,9 +21,11 @@ export default {
       control: 'boolean',
     },
   },
-} as Meta;
+};
 
-const Template: Story<CardProps> = ({
+export default meta;
+
+const Template: StoryFn<CardProps> = ({
   cardTitle,
   footerContent,
   sectionTitle,

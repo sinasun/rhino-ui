@@ -1,15 +1,17 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import { CheckboxInput, CheckboxInputProps } from './CheckboxInput';
 
-export default {
+const meta: Meta<typeof CheckboxInput> = {
   title: 'Components/CheckboxInput/Visual Regression Tests',
   component: CheckboxInput,
-} as Meta;
+};
 
-const Template: Story<CheckboxInputProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<CheckboxInputProps> = ({ ...args }) => (
   <CheckboxInput {...args} onChange={() => {}} /> // eslint-disable-line @typescript-eslint/no-empty-function
 );
 

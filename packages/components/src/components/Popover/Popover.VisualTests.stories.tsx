@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Placement as PlacementType } from '@popperjs/core';
 import { Popover } from './Popover';
 import { Button } from '../Button/Button';
@@ -8,15 +8,17 @@ import { Heading } from '../Heading/Heading';
 import { Icon, IconProps } from '../Icon/Icon';
 import { useOpenClose } from '../../hooks/useOpenClose/useOpenClose';
 
-export default {
+const meta: Meta<typeof Popover> = {
   title: 'Components/Popover/Visual Regression Tests',
   component: Popover,
   parameters: {
     chromatic: { delay: 2000, pauseAnimationAtEnd: true },
   },
-} as Meta;
+};
 
-export const Demo: Story = () => {
+export default meta;
+
+export const Demo: StoryFn = () => {
   const { isOpen: isPopoverOpen, handleToggle: togglePopover } = useOpenClose({
     defaultIsOpen: true,
   });
@@ -145,7 +147,7 @@ export const Demo: Story = () => {
   );
 };
 
-export const Default: Story = () => {
+export const Default: StoryFn = () => {
   const { isOpen: isPopoverOpen, handleToggle: togglePopover } = useOpenClose({
     defaultIsOpen: true,
   });
@@ -168,7 +170,7 @@ export const Default: Story = () => {
   );
 };
 
-export const Placement: Story = () => {
+export const Placement: StoryFn = () => {
   const [isPopoverOpen, setPopoverOpen] = useState<Record<string, boolean>>({
     auto: true,
     'auto-start': true,
@@ -236,7 +238,7 @@ export const Placement: Story = () => {
   );
 };
 
-export const HideArrow: Story = () => {
+export const HideArrow: StoryFn = () => {
   const {
     isOpen: isPopoverOpen,
     handleClose: closePopover,
@@ -275,7 +277,7 @@ export const HideArrow: Story = () => {
   );
 };
 
-export const Offset: Story = () => {
+export const Offset: StoryFn = () => {
   const { isOpen: isPopoverOpen, handleToggle: togglePopover } = useOpenClose({
     defaultIsOpen: true,
   });

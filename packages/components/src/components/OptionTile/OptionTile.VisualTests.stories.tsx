@@ -1,14 +1,15 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn, ComponentStory } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import { ComponentStory } from '@storybook/react';
 import { OptionTile, OptionTileProps } from './OptionTile';
 import { Box } from '../Box/Box';
 
-export default {
+const meta: Meta<typeof OptionTile> = {
   title: 'Components/OptionTile/Visual Regression Tests',
   component: OptionTile,
-} as Meta;
+};
+
+export default meta;
 
 export const States: ComponentStory<typeof OptionTile> = () => (
   <Box gap="lg">
@@ -79,7 +80,7 @@ export const States: ComponentStory<typeof OptionTile> = () => (
   </Box>
 );
 
-const Template: Story<OptionTileProps> = args => (
+const Template: StoryFn<OptionTileProps> = args => (
   <OptionTile
     {...args}
     onChange={() => {}} // eslint-disable-line

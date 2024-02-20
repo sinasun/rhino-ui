@@ -1,17 +1,19 @@
 import React, { ReactElement, useState } from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { TextInput, TextInputProps } from './TextInput';
 import { Icon } from '../Icon/Icon';
 import { Box } from '../Box/Box';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof TextInput> = {
   title: 'Components/TextInput/Visual Regression Tests',
   component: TextInput,
-} as Meta;
+};
 
-const Template: Story<TextInputProps> = args => (
+export default meta;
+
+const Template: StoryFn<TextInputProps> = args => (
   <TextInput
     {...args}
     onChange={() => {}} // eslint-disable-line

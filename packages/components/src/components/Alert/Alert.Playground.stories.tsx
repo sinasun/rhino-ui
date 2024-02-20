@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Alert, AlertProps } from './Alert';
 import { ALERT_VARIANTS } from './Alert.constants';
 
-export default {
+const meta: Meta<typeof Alert> = {
   title: 'Components/Alert/Playground',
   component: Alert,
   argTypes: {
@@ -35,9 +35,11 @@ export default {
       control: 'text',
     },
   },
-} as Meta;
+};
 
-const Template: Story<AlertProps> = ({ ...args }) => <Alert {...args} />;
+export default meta;
+
+const Template: StoryFn<AlertProps> = ({ ...args }) => <Alert {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

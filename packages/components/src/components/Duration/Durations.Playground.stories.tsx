@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Duration, DurationProps } from './Duration';
 
-export default {
+const meta: Meta<typeof Duration> = {
   title: 'Components/Duration/Playground',
   component: Duration,
   argTypes: {
@@ -37,9 +37,11 @@ export default {
       control: 'text',
     },
   },
-} as Meta;
+};
 
-const Template: Story<DurationProps> = ({ ...args }) => <Duration {...args} />;
+export default meta;
+
+const Template: StoryFn<DurationProps> = ({ ...args }) => <Duration {...args} />;
 
 export const Playground = Template.bind({});
 

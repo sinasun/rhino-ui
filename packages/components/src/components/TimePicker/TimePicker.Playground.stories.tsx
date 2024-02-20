@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { TimePicker, TimePickerProps } from './TimePicker';
 
-export default {
+const meta: Meta<typeof TimePicker> = {
   title: 'Components/TimePicker/Playground',
   component: TimePicker,
   argTypes: {
@@ -79,9 +79,11 @@ export default {
       control: 'none',
     },
   },
-} as Meta;
+};
 
-const Template: Story<TimePickerProps> = ({ ...args }) => <TimePicker {...args} />;
+export default meta;
+
+const Template: StoryFn<TimePickerProps> = ({ ...args }) => <TimePicker {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

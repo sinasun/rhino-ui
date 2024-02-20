@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import {
   Badge,
   BadgeProps,
@@ -9,12 +9,14 @@ import {
 import { Box } from '../Box/Box';
 import { BADGE_SIZES, BADGE_VARIANTS } from './Badge.constants';
 
-export default {
+const meta: Meta<typeof Badge> = {
   title: 'Components/Badge/Visual Regression Tests',
   component: Badge,
-} as Meta;
+};
 
-const Template: Story<BadgeProps> = args => (
+export default meta;
+
+const Template: StoryFn<BadgeProps> = args => (
   <Box gap="xl">
     {BADGE_SIZES.map(size => (
       <Box gap="sm" key={size}>

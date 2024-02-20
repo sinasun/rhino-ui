@@ -1,13 +1,15 @@
 import React, { ReactElement } from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 import { SelectInput } from './SelectInput';
 import { Box } from '../Box/Box';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof SelectInput> = {
   title: 'Components/SelectInput/Visual Regression Tests',
   component: SelectInput,
-} as Meta;
+};
+
+export default meta;
 
 export const Sizes = (): ReactElement => (
   <Box gap="xl">
