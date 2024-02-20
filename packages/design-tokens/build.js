@@ -2,13 +2,15 @@ require('dotenv').config();
 const fse = require('fs-extra');
 const StyleDictionary = require('style-dictionary');
 const mapSemanticColors = require('./utils/mapSemanticColors/mapSemanticColors');
-const dictionaryConfig = require('./config.json');
+const dictionaryConfig = require('./config');
 const utilityClass = require('./formats/utilityClass/utilityClass');
 const cssVariablesFont = require('./formats/cssVariablesFont/cssVariablesFont');
 const scssVariablesFont = require('./formats/scssVariablesFont/scssVariablesFont');
 const useSizeUnit = require('./transforms/useSizeUnit/useSizeUnit');
 const customKebab = require('./transforms/customKebab/customKebab');
 const createIconComponents = require('./utils/createIconComponents/createIconComponents');
+const createFileHeader = require("./utils/createFileHeader/createFileHeader");
+const jsFormat = require("./formats/jsFormat/jsFormat");
 
 console.log('Build started...');
 console.log('==============================================');
@@ -39,6 +41,7 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFormat(utilityClass);
 StyleDictionary.registerFormat(cssVariablesFont);
 StyleDictionary.registerFormat(scssVariablesFont);
+StyleDictionary.registerFormat(jsFormat)
 
 // Custom Transforms
 StyleDictionary.registerTransform(useSizeUnit);

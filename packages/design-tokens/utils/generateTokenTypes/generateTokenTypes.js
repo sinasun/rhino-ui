@@ -3,7 +3,7 @@ const path = require('path');
 const babel = require('@babel/core');
 
 const BABEL_OPTIONS = {
-  plugins: ['@babel/plugin-transform-react-jsx', '@babel/plugin-transform-modules-commonjs'],
+  plugins: ['@babel/plugin-transform-react-jsx'],
 };
 const colorTokens = require('../../build/json/variables-color.json');
 const sizeTokens = require('../../build/json/variables-size.json');
@@ -69,7 +69,7 @@ const WIDTH_SIZES = 'WIDTH_SIZES';
 const Z_INDEX_SIZES = 'Z_INDEX_SIZES';
 
 /**
- * ASSETS 
+ * ASSETS
  */
 const { asset } = assetTokens;
 

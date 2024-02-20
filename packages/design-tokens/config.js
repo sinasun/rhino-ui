@@ -1,4 +1,4 @@
-{
+module.exports = {
   "platforms": {
     "scss": {
       "transforms": ["attribute/cti", "name/cti/custom-kebab", "time/seconds", "content/icon", "size/use-unit", "color/css"],
@@ -64,17 +64,17 @@
       "files": [
         {
           "destination": "variables-color.js",
-          "format": "javascript/module",
+          "format": "javascript/esm",
           "filter": "isCategoryColor"
         },
         {
           "destination": "variables-size.js",
-          "format": "javascript/module",
+          "format": "javascript/esm",
           "filter": "isCategorySize"
         },
         {
           "destination": "variables-asset.js",
-          "format": "javascript/module",
+          "format": "javascript/esm",
           "filter": "isCategoryAsset"
         }
       ]
