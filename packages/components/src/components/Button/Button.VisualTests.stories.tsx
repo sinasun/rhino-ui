@@ -1,17 +1,19 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { Button, ButtonProps } from './Button';
 import { BUTTON_SIZES, BUTTON_VARIANTS } from './Button.constants';
 import { Box } from '../Box/Box';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button/Visual Regression Tests',
   component: Button,
-} as Meta;
+};
 
-const Template: Story<ButtonProps & { showIconButton: boolean; }> = (args, showIconButton) => (
+export default meta;
+
+const Template: StoryFn<ButtonProps & { showIconButton: boolean; }> = (args, showIconButton) => (
   <Box gap="xl">
     {BUTTON_SIZES.map(size => (
       <Box gap="sm" key={size}>
@@ -71,7 +73,7 @@ const Template: Story<ButtonProps & { showIconButton: boolean; }> = (args, showI
   </Box>
 );
 
-const SingleButtonTemplate: Story<ButtonProps> = args => (
+const SingleButtonTemplate: StoryFn<ButtonProps> = args => (
   // the div is to add padding so that chromatic captures the box-shadow focus state
   <div className="p-md">
     <Button {...args}>label</Button>

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { SelectInput, SelectInputProps } from './SelectInput';
 
-export default {
+const meta: Meta<typeof SelectInput> = {
   title: 'Components/SelectInput/Playground',
   component: SelectInput,
   argTypes: {
@@ -58,9 +58,11 @@ export default {
       control: 'none',
     },
   },
-} as Meta;
+};
 
-const Template: Story<SelectInputProps> = ({ ...args }) => <SelectInput {...args} />;
+export default meta;
+
+const Template: StoryFn<SelectInputProps> = ({ ...args }) => <SelectInput {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

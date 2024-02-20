@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { CategoryFilter, CategoryFilterProps } from './CategoryFilter';
 
-export default {
+const meta: Meta<typeof CategoryFilter> = {
   title: 'Components/CategoryFilter/Playground',
   component: CategoryFilter,
   argTypes: {
@@ -17,9 +17,11 @@ export default {
       options: ['xs', 'sm', 'md', 'lg'],
     },
   },
-} as Meta;
+};
 
-const Template: Story<CategoryFilterProps> = ({ ...args }) => <CategoryFilter {...args}>My Category</CategoryFilter>;
+export default meta;
+
+const Template: StoryFn<CategoryFilterProps> = ({ ...args }) => <CategoryFilter {...args}>My Category</CategoryFilter>;
 
 export const Playground = Template.bind({});
 Playground.args = {

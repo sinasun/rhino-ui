@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Badge, BadgeProps } from './Badge';
 import { BADGE_SIZES, BADGE_VARIANTS } from './Badge.constants';
 
-export default {
+const meta: Meta<typeof Badge> = {
   title: 'Components/Badge/Playground',
   component: Badge,
   argTypes: {
@@ -26,9 +26,11 @@ export default {
       control: 'text',
     },
   },
-} as Meta;
+};
 
-const Template: Story<BadgeProps> = ({ ...args }) => <Badge {...args} />;
+export default meta;
+
+const Template: StoryFn<BadgeProps> = ({ ...args }) => <Badge {...args} />;
 
 /**
  * Use the playground to see different results

@@ -1,15 +1,17 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Icon, IconProps } from './Icon';
 import { Box } from '../Box/Box';
 import { FONT_SIZE_OPTIONS, FONT_COLOR_OPTIONS } from '../../lib/tokens';
 import { FontColor, FontSize } from '../../types';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof Icon> = {
   title: 'Components/Icon/Visual Regression Tests',
   component: Icon,
-} as Meta;
+};
+
+export default meta;
 
 export const SizeAndColor: React.FunctionComponent<IconProps> = () => (
   <Box direction="row" gap="sm" background="grey-50">
@@ -28,7 +30,7 @@ export const SizeAndColor: React.FunctionComponent<IconProps> = () => (
   </Box>
 );
 
-const IconTemplate: Story<IconProps> = ({ ...args }) => <Icon {...args} />;
+const IconTemplate: StoryFn<IconProps> = ({ ...args }) => <Icon {...args} />;
 
 export const ResponsiveSize = IconTemplate.bind({});
 ResponsiveSize.args = {

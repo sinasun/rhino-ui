@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Box, BoxProps } from './Box';
 import {
   BORDER_SIZE_OPTIONS,
@@ -15,7 +15,7 @@ import {
   HEIGHT_OPTIONS,
 } from '../../lib/tokens';
 
-export default {
+const meta: Meta<typeof Box> = {
   title: 'Components/Box/Playground',
   component: Box,
   argTypes: {
@@ -380,9 +380,11 @@ export default {
     children: { control: false },
     alignSelf: { control: false },
   },
-} as Meta;
+};
 
-const Template: Story<BoxProps> = ({
+export default meta;
+
+const Template: StoryFn<BoxProps> = ({
   childCount,
   childBackground,
   childWidth,

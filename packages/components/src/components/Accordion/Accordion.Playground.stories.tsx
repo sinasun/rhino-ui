@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Accordion, AccordionProps } from './Accordion';
 import { boxPropsKeys } from '../Box/Box';
 
-export default {
+const meta: Meta<typeof Accordion> = {
   title: 'Components/Accordion/Playground',
   component: Accordion,
   argTypes: {
@@ -21,9 +21,11 @@ export default {
     },
     ...boxPropsKeys.reduce((acc, curr) => ({ ...acc, [curr]: { table: { disable: true } } }), {}),
   },
-} as Meta;
+};
 
-const Template: Story<AccordionProps> = ({
+export default meta;
+
+const Template: StoryFn<AccordionProps> = ({
   hasCaret,
   openPanels,
   ...args

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { boxPropsKeys } from '../Box/Box';
 import { SelectInputNative, SelectInputNativeProps } from './SelectInputNative';
 
-export default {
+const meta: Meta<typeof SelectInputNative> = {
   title: 'Components/SelectInputNative/Playground',
   component: SelectInputNative,
   argTypes: {
@@ -54,9 +54,11 @@ export default {
     },
     ...boxPropsKeys.reduce((acc, curr) => ({ ...acc, [curr]: { table: { disable: true } } }), {}),
   },
-} as Meta;
+};
 
-const Template: Story<SelectInputNativeProps> = ({ ...args }) => <SelectInputNative {...args} />;
+export default meta;
+
+const Template: StoryFn<SelectInputNativeProps> = ({ ...args }) => <SelectInputNative {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

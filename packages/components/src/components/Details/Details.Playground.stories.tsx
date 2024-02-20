@@ -1,10 +1,10 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Button } from '../Button/Button';
 import { Box, boxPropsKeys } from '../Box/Box';
 import { Details, DetailsProps } from './Details';
 
-export default {
+const meta: Meta<typeof Details> = {
   title: 'Components/Details/Playground',
   component: Details,
   argTypes: {
@@ -13,9 +13,11 @@ export default {
     },
     ...boxPropsKeys.reduce((acc, curr) => ({ ...acc, [curr]: { table: { disable: true } } }), {}),
   },
-} as Meta;
+};
 
-const Template: Story<DetailsProps> = ({
+export default meta;
+
+const Template: StoryFn<DetailsProps> = ({
   isOpen,
   summaryText,
   detailsText,

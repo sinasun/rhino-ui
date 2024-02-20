@@ -1,14 +1,16 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import { RadioGroup, RadioGroupProps } from './RadioGroup';
 import { Box } from '../Box/Box';
 
-export default {
+const meta: Meta<typeof RadioGroup> = {
   title: 'Components/RadioGroup/Visual Regression Tests',
   component: RadioGroup,
-} as Meta;
+};
+
+export default meta;
 
 const sizes = [
   'sm',
@@ -40,7 +42,7 @@ const options = [
   },
 ];
 
-const Template: Story<RadioGroupProps> = ({ ...args }) => (
+const Template: StoryFn<RadioGroupProps> = ({ ...args }) => (
   <Box gap="xl">
     {sizes.map(size => (
       <Box gap="md" key={`${args.id}-${size}`}>
@@ -238,7 +240,7 @@ AllSizesHorizontalTitleDisabledOptionSelected.args = {
   direction: 'row',
 };
 
-const SimpleTemplate: Story<RadioGroupProps> = ({ ...args }) => (
+const SimpleTemplate: StoryFn<RadioGroupProps> = ({ ...args }) => (
   <RadioGroup {...args} options={options} />
 );
 

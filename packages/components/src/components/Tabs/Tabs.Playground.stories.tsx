@@ -1,10 +1,10 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Box, boxPropsKeys } from '../Box/Box';
 import { Tabs, TabsProps } from './Tabs';
 import { TabPanels } from '../TabPanels/TabPanels';
 
-export default {
+const meta: Meta<typeof Tabs> = {
   title: 'Components/Tabs/Playground',
   component: Tabs,
   argTypes: {
@@ -43,9 +43,11 @@ export default {
     },
     ...boxPropsKeys.reduce((acc, curr) => ({ ...acc, [curr]: { table: { disable: true } } }), {}),
   },
-} as Meta;
+};
 
-const Template: Story<TabsProps> = ({
+export default meta;
+
+const Template: StoryFn<TabsProps> = ({
   value,
   size,
   disabledTabs,

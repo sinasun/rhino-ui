@@ -1,14 +1,16 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Tabs, TabsProps } from './Tabs';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof Tabs> = {
   title: 'Components/Tabs/Visual Regression Tests',
   component: Tabs,
-} as Meta;
+};
 
-const Template: Story<TabsProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<TabsProps> = ({ ...args }) => (
   <Tabs {...args}>
     <Tabs.Item>Tab 1</Tabs.Item>
     <Tabs.Item>Tab 2</Tabs.Item>

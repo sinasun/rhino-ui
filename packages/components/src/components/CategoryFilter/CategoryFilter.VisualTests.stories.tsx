@@ -1,6 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, ComponentStory } from '@storybook/react';
 import { Box } from '../Box/Box';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import {
@@ -10,12 +9,14 @@ import {
 } from './CategoryFilter';
 import CATEGORY_FILTER_SIZES from './CategoryFilter.constants';
 
-export default {
+const meta: Meta<typeof CategoryFilter> =  {
   title: 'Components/CategoryFilter/Visual Regression Tests',
   component: CategoryFilter,
-} as Meta;
+};
 
-const Template: Story<CategoryFilterProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<CategoryFilterProps> = ({ ...args }) => (
   <Box display="block" childGap="xl">
     {CATEGORY_FILTER_SIZES.map(size => (
       <Box gap="sm" key={size} direction="row">
