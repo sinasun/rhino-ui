@@ -9,8 +9,7 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "clean": "rm -rf build",
-    "semantic-release": "semantic-release"
+    "clean": "rm -rf build"
   },
   "repository": "https://github.com/rhinolabs/rhino-ui.git",
   "author": "@rhinolabs",
@@ -32,7 +31,6 @@
     "node-fetch": "^3.3.2",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "semantic-release": "^23.0.0",
     "style-dictionary": "^2.10.0"
   }
 }

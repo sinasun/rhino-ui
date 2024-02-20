@@ -348,9 +348,6 @@ importers:
       react-dom:
         specifier: '>=16.8.0'
         version: 16.14.0(react@16.14.0)
-      semantic-release:
-        specifier: ^23.0.0
-        version: 23.0.2
       style-dictionary:
         specifier: ^2.10.0
         version: 2.10.3
