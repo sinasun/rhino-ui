@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "build": "node build.js",
-    "test": "jest",
     "clean": "rm -rf build",
     "semantic-release": "semantic-release"
   },
@@ -30,7 +29,6 @@
     "babel-preset-env": "^1.7.0",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.0.1",
-    "jest": "^26.2.2",
     "node-fetch": "^3.3.2",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
