@@ -1,17 +1,19 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import { Toggle, ToggleProps } from './Toggle';
 import TOGGLE_SIZES from './Toggle.constants';
 import { Box } from '../Box/Box';
 
-export default {
+const meta: Meta<typeof Toggle> = {
   title: 'Components/Toggle/Visual Regression Tests',
   component: Toggle,
   parameters: RESPONSIVE_STORY,
-} as Meta;
+};
 
-const Template: Story<ToggleProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<ToggleProps> = ({ ...args }) => (
   <Box gap="xl">
     {TOGGLE_SIZES.map(size => (
       <Box gap="md" key={`${args.id}-${size}`}>

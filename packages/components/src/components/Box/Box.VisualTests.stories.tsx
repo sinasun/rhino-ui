@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-else-return */
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Box, BoxProps } from './Box';
 import {
   FONT_SIZE_OPTIONS,
@@ -15,10 +15,12 @@ import { RESPONSIVE_STORY } from '../../docs/constants';
 import { ResponsiveProvider } from '../ResponsiveProvider/ResponsiveProvider';
 import { useBreakpoint } from '../../hooks/useBreakpoint/useBreakpoint';
 
-export default {
+const meta: Meta<typeof Box> = {
   title: 'Components/Box/Visual Regression Tests',
   component: Box,
-} as Meta;
+};
+
+export default meta;
 
 export const AllBackgroundColors: React.FunctionComponent<BoxProps> = () => (
   <Box flex="auto" direction="row" fontSize="sm">
@@ -452,7 +454,7 @@ export const AllVerticalPadding: React.FunctionComponent<BoxProps> = () => (
   </>
 );
 
-const BoxTemplate: Story<BoxProps> = ({ propertyName, ...args }) => {
+const BoxTemplate: StoryFn<BoxProps> = ({ propertyName, ...args }) => {
   const Component = () => {
     const { activeBreakpoint } = useBreakpoint();
     return (

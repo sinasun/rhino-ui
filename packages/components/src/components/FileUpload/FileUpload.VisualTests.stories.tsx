@@ -1,14 +1,16 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import { FileUpload, FileUploadProps } from './FileUpload';
 
-export default {
+const meta: Meta<typeof FileUpload> = {
   title: 'Components/FileUpload/Visual Regression Tests',
   component: FileUpload,
-} as Meta;
+};
 
-const Template: Story<FileUploadProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<FileUploadProps> = ({ ...args }) => (
   <FileUpload {...args}>category filter</FileUpload> // eslint-disable-line @typescript-eslint/no-empty-function
 );
 

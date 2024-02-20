@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { boxPropsKeys } from '../Box/Box';
 import { OptionTileGroup, OptionTileGroupProps } from './OptionTileGroup';
 
-export default {
+const meta: Meta<typeof OptionTileGroup> = {
   title: 'Components/OptionTileGroup/Playground',
   component: OptionTileGroup,
   argTypes: {
@@ -61,9 +61,11 @@ export default {
       },
     },
   },
-} as Meta;
+};
 
-const Template: Story<OptionTileGroupProps> = ({
+export default meta;
+
+const Template: StoryFn<OptionTileGroupProps> = ({
   value,
   onChange,
   name,

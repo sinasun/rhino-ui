@@ -1,14 +1,16 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { TextareaInput, TextareaInputProps } from './TextareaInput';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 
-export default {
+const meta: Meta<typeof TextareaInput> = {
   title: 'Components/TextareaInput/Visual Regression Tests',
   component: TextareaInput,
-} as Meta;
+};
 
-const Template: Story<TextareaInputProps> = args => (
+export default meta;
+
+const Template: StoryFn<TextareaInputProps> = args => (
   <TextareaInput
     {...args}
     onChange={() => {}} // eslint-disable-line

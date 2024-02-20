@@ -1,10 +1,10 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { FONT_COLOR_OPTIONS, FONT_SIZE_OPTIONS } from '../../lib/tokens';
 import { HEADING_LEVELS } from './Heading.constants';
 import { Heading, HeadingProps } from './Heading';
 
-export default {
+const meta: Meta<typeof Heading> = {
   title: 'Components/Heading/Playground',
   component: Heading,
   argTypes: {
@@ -33,9 +33,11 @@ export default {
       },
     },
   },
-} as Meta;
+};
 
-const Template: Story<HeadingProps> = ({ ...args }) => <Heading {...args} />;
+export default meta;
+
+const Template: StoryFn<HeadingProps> = ({ ...args }) => <Heading {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

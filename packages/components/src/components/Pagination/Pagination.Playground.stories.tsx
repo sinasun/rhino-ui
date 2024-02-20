@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { Pagination, PaginationProps } from './Pagination';
 
-export default {
+const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination/Playground',
   component: Pagination,
   argTypes: {
@@ -28,9 +28,11 @@ export default {
       control: 'text',
     },
   },
-} as Meta;
+};
 
-const Template: Story<PaginationProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<PaginationProps> = ({ ...args }) => (
   <Pagination {...args} />
 );
 export const Playground = Template.bind({});

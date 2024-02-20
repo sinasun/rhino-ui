@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { FormLabel, FormLabelProps } from './FormLabel';
 
-export default {
+const meta: Meta<typeof FormLabel> =  {
   title: 'Components/FormLabel/Playground',
   component: FormLabel,
   argTypes: {
@@ -22,9 +22,11 @@ export default {
       control: 'text',
     },
   },
-} as Meta;
+};
 
-const Template: Story<FormLabelProps> = ({ ...args }) => <FormLabel {...args} />;
+export default meta;
+
+const Template: StoryFn<FormLabelProps> = ({ ...args }) => <FormLabel {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

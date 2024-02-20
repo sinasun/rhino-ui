@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { RadioGroup, RadioGroupProps } from './RadioGroup';
 
-export default {
+const meta: Meta<typeof RadioGroup> = {
   title: 'Components/RadioGroup/Playground',
   component: RadioGroup,
   argTypes: {
@@ -44,9 +44,11 @@ export default {
       options: ['sm', 'md', 'lg'],
     },
   },
-} as Meta;
+};
 
-const Template: Story<RadioGroupProps> = ({ ...args }) => <RadioGroup {...args} />;
+export default meta;
+
+const Template: StoryFn<RadioGroupProps> = ({ ...args }) => <RadioGroup {...args} />;
 
 export const Playground = Template.bind({});
 Playground.args = {

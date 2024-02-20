@@ -1,10 +1,10 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { FileUpload, FileUploadProps } from './FileUpload';
 import { ICON_NAMES } from '../../lib/tokens';
 import { BUTTON_SIZES } from '../Button/Button.constants';
 
-export default {
+const meta: Meta<typeof FileUpload> = {
   title: 'Components/FileUpload/Playground',
   component: FileUpload,
   argTypes: {
@@ -69,9 +69,11 @@ export default {
       },
     },
   },
-} as Meta;
+};
 
-const Template: Story<FileUploadProps> = ({ ...args }) => (
+export default meta;
+
+const Template: StoryFn<FileUploadProps> = ({ ...args }) => (
   <FileUpload {...args} />
 );
 

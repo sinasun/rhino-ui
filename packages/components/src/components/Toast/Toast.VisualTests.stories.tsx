@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 import { ToastContainer, toast } from '.';
 
-export default {
+const meta: Meta<typeof ToastContainer> = {
   title: 'Components/Toast/Visual Regression Tests',
   component: ToastContainer,
   parameters: {
@@ -16,7 +16,9 @@ export default {
       </div>
     ),
   ],
-} as Meta;
+};
+
+export default meta;
 
 export const Default = (): React.ReactNode => {
   setTimeout(() => {
