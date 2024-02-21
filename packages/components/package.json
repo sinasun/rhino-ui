@@ -44,7 +44,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint-js": "cross-env EXTEND_ESLINT=true eslint src",
-    "lint-js:fix": "cross-env EXTEND_ESLINT=true eslint . --fix",
+    "lint-js:fix": "cross-env EXTEND_ESLINT=true eslint src --fix",
     "lint-styles": "stylelint '**/*.{css,scss,sass}'",
     "lint-styles:fix": "stylelint '**/*.{css,scss,sass}' --fix",
     "prepublishOnly": "pnpm run build",
