@@ -65,8 +65,7 @@
     ]
   },
   "devDependencies": {
-    "@fullstory/browser": "^1.7.1",
-    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/rollup": "^3.0.1",
     "@size-limit/preset-small-lib": "^4.12.0",
     "@storybook/addon-a11y": "^7.6.16",
     "@storybook/addon-actions": "^7.6.16",

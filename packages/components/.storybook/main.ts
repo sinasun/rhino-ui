@@ -19,7 +19,6 @@ const config: StorybookConfig = {
     "@storybook/addon-designs",
     "storybook-addon-mdx-embed",
     "@storybook/addon-mdx-gfm",
-    "./register",
   ],
   framework: {
     name: "@storybook/react-vite",
