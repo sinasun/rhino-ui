@@ -2,9 +2,9 @@ const svgr = require('@svgr/core').default;
 const fs = require('fs');
 const path = require('path');
 const babel = require('@babel/core');
-const pascalCase = require('../pascalCase/pascalCase');
-const createFileHeader = require('../createFileHeader/createFileHeader');
-const indentLine = require('../indentLine/indentLine');
+const pascalCase = require('../pascal-case/pascal-case');
+const createFileHeader = require('../create-file-header/create-file-header');
+const indentLine = require('../indent-line/indent-line');
 
 const BABEL_OPTIONS = {
   plugins: ['@babel/plugin-transform-react-jsx'],

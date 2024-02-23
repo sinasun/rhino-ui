@@ -1,4 +1,4 @@
-const createFileHeader = require("../../utils/createFileHeader/createFileHeader");
+const createFileHeader = require("../../utils/create-file-header/create-file-header");
 const {format} = require("style-dictionary");
 
 const jsFormat = {

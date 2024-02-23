@@ -1,4 +1,4 @@
-const kebabCase = require('../../utils/kebabCase/kebabCase');
+const kebabCase = require('../../utils/kebab-case/kebab-case');
 
 const customKebab = {
   name: 'name/cti/custom-kebab',

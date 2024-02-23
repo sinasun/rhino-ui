@@ -1,6 +1,6 @@
-const createFileHeader = require('../../utils/createFileHeader/createFileHeader');
-const addNewLines = require('../../utils/addNewLines/addNewLines');
-const variablesWithPrefix = require('../../utils/variablesWithPrefix/variablesWithPrefix');
+const createFileHeader = require('../../utils/create-file-header/create-file-header');
+const addNewLines = require('../../utils/add-new-lines/add-new-lines');
+const variablesWithPrefix = require('../../utils/variables-with-prefix/variables-with-prefix');
 
 
 const cssVariablesFont = {
