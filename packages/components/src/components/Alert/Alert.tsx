@@ -5,9 +5,9 @@ import classNames from 'classnames';
 import { Heading } from '../Heading/Heading';
 import { Box } from '../Box/Box';
 import { Icon } from '../Icon/Icon';
-import styles from './Alert.module.scss';
-import { AlertVariant } from './Alert.types';
-import { ALERT_ICONS_MAP } from './Alert.constants';
+import styles from './alert.module.scss';
+import { AlertVariant } from './alert.types';
+import { ALERT_ICONS_MAP } from './alert.constants';
 
 export interface AlertProps {
   /**

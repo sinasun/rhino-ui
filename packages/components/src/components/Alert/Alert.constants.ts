@@ -1,5 +1,5 @@
 import { IconName } from '../../types';
-import { AlertVariant } from './Alert.types';
+import { AlertVariant } from './alert.types';
 
 // eslint-disable-next-line import/prefer-default-export
 export const ALERT_VARIANTS: AlertVariant[] = ['info', 'success', 'warning', 'danger', 'default'];

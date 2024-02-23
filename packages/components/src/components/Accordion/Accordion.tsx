@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, BoxProps } from '../Box/Box';
-import { AccordionPanel } from './AccordionPanel';
-import { AccordionPanelDetails } from './AccordionPanelDetails';
-import { AccordionPanelSummary } from './AccordionPanelSummary';
+import { AccordionPanel } from './accordion-panel';
+import { AccordionPanelDetails } from './accordion-panel-details';
+import { AccordionPanelSummary } from './accordion-panel-summary';
 
 export type AccordionProps = BoxProps;
 

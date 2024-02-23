@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { Accordion, AccordionProps } from './Accordion';
+import { Accordion, AccordionProps } from './accordion';
 import { boxPropsKeys } from '../Box/Box';
 
 const meta: Meta<typeof Accordion> = {

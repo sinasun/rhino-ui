@@ -1,3 +1,3 @@
-export * from './Alert';
-export * from './Alert.constants';
-export * from './Alert.types';
+export * from './alert';
+export * from './alert.constants';
+export * from './alert.types';

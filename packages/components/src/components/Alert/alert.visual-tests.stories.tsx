@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { Alert, AlertProps } from './Alert';
-import { ALERT_VARIANTS } from './Alert.constants';
+import { Alert, AlertProps } from './alert';
+import { ALERT_VARIANTS } from './alert.constants';
 import { Box } from '../Box/Box';
 import { Heading } from '../Heading/Heading';
 
