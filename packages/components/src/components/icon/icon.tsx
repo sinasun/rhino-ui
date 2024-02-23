@@ -1,7 +1,7 @@
 import React, { FC, forwardRef } from 'react';
 import icons from '@rhino-ui/design-tokens/build/icons/react';
 import classNames from 'classnames';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
 import {
   FontColor, FontSize, IconName, ResponsiveProp,
 } from '../../types';

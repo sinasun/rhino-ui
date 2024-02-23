@@ -35,10 +35,10 @@ import {
   ZIndexSize,
 } from '../../types';
 import { KnownKeys } from '../../types/lib.types';
-import { getDimensionCss } from '../../lib/getDimensionCss';
-import { cssShorthandToClasses } from '../../lib/cssShorthandToClasses';
-import { getElementType } from '../../lib/getElementType';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
+import { getDimensionCss } from '../../lib/get-dimension-css';
+import { cssShorthandToClasses } from '../../lib/css-shorthand-to-classes';
+import { getElementType } from '../../lib/get-element-type';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
 import styles from './box.module.scss';
 
 export type HoverableBoxProperties = 'color' | 'borderColor' | 'shadow' | 'background';

@@ -1,6 +1,6 @@
 import React from 'react';
-import { prefersReducedMotion } from '../../lib/prefersReducedMotion';
-import { resolveValue } from '../../lib/resolveValue';
+import { prefersReducedMotion } from '../../lib/prefers-reduced-motion';
+import { resolveValue } from '../../lib/resolve-value';
 import { Box } from '../box/box';
 import {
   Toast,

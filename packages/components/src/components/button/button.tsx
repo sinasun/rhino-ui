@@ -3,11 +3,11 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { IconName, ResponsiveProp } from '../../types';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
-import { handleReactRouterClick } from '../../lib/reactRouterClickHandler';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
+import { handleReactRouterClick } from '../../lib/react-router-click-handler';
 import { Box } from '../box/box';
 import { Icon } from '../icon/icon';
-import { getElementType } from '../../lib/getElementType';
+import { getElementType } from '../../lib/get-element-type';
 import { Spinner } from '../spinner/spinner';
 import styles from './button.module.scss';
 

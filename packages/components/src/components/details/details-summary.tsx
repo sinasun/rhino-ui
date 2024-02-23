@@ -1,5 +1,5 @@
 import React, { MouseEvent, KeyboardEvent } from 'react';
-import { ENTER, SPACE } from '../../constants/keyCodes';
+import { ENTER, SPACE } from '../../constants/key-codes';
 import { Box, BoxProps } from '../box/box';
 
 export interface DetailsSummaryProps extends BoxProps {

@@ -6,8 +6,8 @@ import { ResponsiveProp } from '../../types';
 import { Box, BoxProps } from '../box/box';
 import { FormLabel } from '../form-label/form-label';
 import { InputValidationMessage } from '../input-validation-message/input-validation-message';
-import { getAutoCompleteValue } from '../../lib/getAutoCompleteValue';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
+import { getAutoCompleteValue } from '../../lib/get-auto-complete-value';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
 import styles from './textarea-input.module.scss';
 
 export type TextareaInputSize = 'sm' | 'md' | 'lg';

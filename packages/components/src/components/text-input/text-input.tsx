@@ -13,12 +13,12 @@ import classNames from 'classnames';
 import Cleave from 'cleave.js/react';
 import { ChangeEvent as CleaveChangeEvent } from 'cleave.js/react/props';
 import { ResponsiveProp, UnknownPropertiesObjType } from '../../types';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
 import { getInputMaskType } from './text-input-masks'; // eslint-disable-line import/no-cycle
 import { Box, BoxProps } from '../box/box';
 import { Icon } from '../icon/icon';
 import { FormControl } from '../form-control/form-control';
-import { getAutoCompleteValue } from '../../lib/getAutoCompleteValue';
+import { getAutoCompleteValue } from '../../lib/get-auto-complete-value';
 import styles from './text-input.module.scss';
 
 export type InputMaskType = ('phone' | 'creditCard' | 'date') | UnknownPropertiesObjType;

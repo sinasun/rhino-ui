@@ -1,6 +1,6 @@
 import { FC, createElement } from 'react';
 import classNames from 'classnames';
-import { getElementType } from '../../lib/getElementType';
+import { getElementType } from '../../lib/get-element-type';
 
 export interface DurationLabelConfiguration {
   day: string;

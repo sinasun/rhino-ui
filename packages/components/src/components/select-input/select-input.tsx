@@ -11,7 +11,7 @@ import Select, {
 } from 'react-select';
 import { SimulatedEventPayloadType, ResponsiveProp } from '../../types';
 import { Z_INDEX_VALUES } from '../../lib/tokens';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
 import { Box } from '../box/box';
 import { Icon } from '../icon/icon';
 import { FormLabel } from '../form-label/form-label';

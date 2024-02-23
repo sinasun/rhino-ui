@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { resolveValue } from '../../lib/resolveValue';
+import { resolveValue } from '../../lib/resolve-value';
 import { ValueOrFunction } from '../../types';
 import {
   Toast,

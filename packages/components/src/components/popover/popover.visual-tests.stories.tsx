@@ -6,7 +6,7 @@ import { Button } from '../button/button';
 import { Box } from '../box/box';
 import { Heading } from '../heading/heading';
 import { Icon, IconProps } from '../icon/icon';
-import { useOpenClose } from '../../hooks/useOpenClose/useOpenClose';
+import { useOpenClose } from '../../hooks/use-open-close/use-open-close';
 
 const meta: Meta<typeof Popover> = {
   title: 'Components/Popover/Visual Regression Tests',

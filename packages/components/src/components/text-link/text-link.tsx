@@ -1,6 +1,6 @@
 import React, { FC, MouseEvent, forwardRef } from 'react';
 import classNames from 'classnames';
-import { handleReactRouterClick } from '../../lib/reactRouterClickHandler';
+import { handleReactRouterClick } from '../../lib/react-router-click-handler';
 import styles from './text-link.module.scss';
 
 export interface TextLinkProps {

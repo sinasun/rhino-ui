@@ -1,5 +1,5 @@
 import { StylesAndClasses, FlexProperty, ResponsiveProp } from '../types';
-import { doesStringIncludeCssUnit } from './doesStringIncludeCssUnit';
+import { doesStringIncludeCssUnit } from './does-string-include-css-unit';
 
 const flexValues = ['initial', 'auto', 'unset', 'none', 'inherit'];
 

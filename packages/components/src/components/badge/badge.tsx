@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import {
   BrandColor, FontColor, FontSize, BaseSpacing, ResponsiveProp,
 } from '../../types';
-import { generateResponsiveClasses } from '../../lib/generateResponsiveClasses';
+import { generateResponsiveClasses } from '../../lib/generate-responsive-classes';
 import styles from './badge.module.scss';
 import { Box } from '../box/box';
 

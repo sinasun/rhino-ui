@@ -13,7 +13,7 @@ import {
 import { BrandColor } from '../../types';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import { ResponsiveProvider } from '../responsive-provider/responsive-provider';
-import { useBreakpoint } from '../../hooks/useBreakpoint/useBreakpoint';
+import { useBreakpoint } from '../../hooks/use-breakpoint/use-breakpoint';
 
 const meta: Meta<typeof Box> = {
   title: 'Components/Box/Visual Regression Tests',
