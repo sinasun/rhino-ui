@@ -72,8 +72,8 @@ try {
     console.log('Loading from Figma is not currently supported...');
   }
 
-  if (fse.pathExistsSync('./localVariables.json')) {
-    const localVariables = require('./localVariables.json');
+  if (fse.pathExistsSync('./local-variables.json')) {
+    const localVariables = require('./local-variables.json');
     properties = { ...properties, ...localVariables };
   }
 
