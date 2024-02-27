@@ -1,5 +1,4 @@
-import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { RESPONSIVE_STORY } from '../../docs/constants';
 import { CheckboxInput, CheckboxInputProps } from './checkbox-input';
@@ -11,184 +10,205 @@ const meta: Meta<typeof CheckboxInput> = {
 
 export default meta;
 
-const Template: StoryFn<CheckboxInputProps> = ({ ...args }) => (
-  <CheckboxInput {...args} onChange={() => {}} /> // eslint-disable-line @typescript-eslint/no-empty-function
-);
+type Story = StoryObj<CheckboxInputProps>;
 
-export const ResponsiveSizeOneUnchecked: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeOneUnchecked.args = {
-  id: 'ResponsiveSizeOneUnchecked',
-  label: 'ResponsiveSizeOneUnchecked',
-  isChecked: false,
-  size: {
-    base: 'sm',
-    tablet: 'md',
-    desktop: 'lg',
-    hd: 'sm',
+const Responsive: Story = {
+  parameters: RESPONSIVE_STORY,
+};
+
+const ResponsiveSizeOne: Story = {
+  ...Responsive,
+  args: {
+    size: {
+      base: 'sm',
+      tablet: 'md',
+      desktop: 'lg',
+      hd: 'sm',
+    },
   },
 };
-ResponsiveSizeOneUnchecked.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeTwoUnchecked: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeTwoUnchecked.args = {
-  id: 'ResponsiveSizeTwoUnchecked',
-  label: 'ResponsiveSizeTwoUnchecked',
-  isChecked: false,
-  size: {
-    base: 'md',
-    tablet: 'lg',
-    desktop: 'sm',
-    hd: 'md',
+const ResponsiveSizeTwo: Story = {
+  ...Responsive,
+  args: {
+    size: {
+      base: 'md',
+      tablet: 'lg',
+      desktop: 'sm',
+      hd: 'md',
+    },
   },
 };
-ResponsiveSizeTwoUnchecked.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeThreeUnchecked: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeThreeUnchecked.args = {
-  id: 'ResponsiveSizeThreeUnchecked',
-  label: 'ResponsiveSizeThreeUnchecked',
-  isChecked: false,
-  size: {
-    base: 'lg',
-    tablet: 'sm',
-    desktop: 'md',
-    hd: 'lg',
+const ResponsiveSizeThree: Story = {
+  ...Responsive,
+  args: {
+    size: {
+      base: 'lg',
+      tablet: 'sm',
+      desktop: 'md',
+      hd: 'lg',
+    },
   },
 };
-ResponsiveSizeThreeUnchecked.parameters = RESPONSIVE_STORY;
-
-export const ResponsiveSizeOneChecked: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeOneChecked.args = {
-  id: 'ResponsiveSizeOneChecked',
-  label: 'ResponsiveSizeOneChecked',
-  isChecked: true,
-  size: {
-    base: 'sm',
-    tablet: 'md',
-    desktop: 'lg',
-    hd: 'sm',
+const Checked: Story = {
+  args: {
+    isChecked: true,
   },
 };
-ResponsiveSizeOneChecked.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeTwoChecked: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeTwoChecked.args = {
-  id: 'ResponsiveSizeTwoChecked',
-  label: 'ResponsiveSizeTwoChecked',
-  isChecked: true,
-  size: {
-    base: 'md',
-    tablet: 'lg',
-    desktop: 'sm',
-    hd: 'md',
+const Unchecked: Story = {
+  args: {
+    isChecked: false,
   },
 };
-ResponsiveSizeTwoChecked.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeThreeChecked: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeThreeChecked.args = {
-  id: 'ResponsiveSizeThreeChecked',
-  label: 'ResponsiveSizeThreeChecked',
-  isChecked: true,
-  size: {
-    base: 'lg',
-    tablet: 'sm',
-    desktop: 'md',
-    hd: 'lg',
+const ResponsiveInderterminate: Story = {
+  ...Responsive,
+  args: {
+    isIndeterminate: true,
   },
 };
-ResponsiveSizeThreeChecked.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeOneIndeterminate: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeOneIndeterminate.args = {
-  id: 'ResponsiveSizeOneIndeterminate',
-  label: 'ResponsiveSizeOneIndeterminate',
-  isChecked: true,
-  size: {
-    base: 'sm',
-    tablet: 'md',
-    desktop: 'lg',
-    hd: 'sm',
+export const ResponsiveSizeOneUnchecked: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeOne,
+    ...Unchecked.args,
+    id: 'ResponsiveSizeOneUnchecked',
+    label: 'ResponsiveSizeOneUnchecked',
   },
-  isIndeterminate: true,
 };
-ResponsiveSizeOneIndeterminate.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeTwoIndeterminate: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeTwoIndeterminate.args = {
-  id: 'ResponsiveSizeTwoIndeterminate',
-  label: 'ResponsiveSizeTwoIndeterminate',
-  isChecked: true,
-  size: {
-    base: 'md',
-    tablet: 'lg',
-    desktop: 'sm',
-    hd: 'md',
+export const ResponsiveSizeTwoUnchecked: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeTwo.args,
+    ...Unchecked.args,
+    id: 'ResponsiveSizeTwoUnchecked',
+    label: 'ResponsiveSizeTwoUnchecked',
   },
-  isIndeterminate: true,
 };
-ResponsiveSizeTwoIndeterminate.parameters = RESPONSIVE_STORY;
 
-export const ResponsiveSizeThreeIndeterminate: StoryFn<CheckboxInputProps> = Template.bind({});
-ResponsiveSizeThreeIndeterminate.args = {
-  id: 'ResponsiveSizeThreeIndeterminate',
-  label: 'ResponsiveSizeThreeIndeterminate',
-  isChecked: true,
-  size: {
-    base: 'lg',
-    tablet: 'sm',
-    desktop: 'md',
-    hd: 'lg',
+export const ResponsiveSizeThreeUnchecked: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeThree.args,
+    ...Unchecked.args,
+    id: 'ResponsiveSizeThreeUnchecked',
+    label: 'ResponsiveSizeThreeUnchecked',
   },
-  isIndeterminate: true,
-};
-ResponsiveSizeThreeIndeterminate.parameters = RESPONSIVE_STORY;
-
-export const FocusChecked: StoryFn<CheckboxInputProps> = Template.bind({});
-FocusChecked.args = {
-  id: 'FocusUnchecked',
-  label: 'Focus Checked',
-  isChecked: true,
 };
 
-FocusChecked.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  canvas.getByRole('checkbox').focus();
+export const ResponsiveSizeOneChecked: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeOne.args,
+    ...Checked.args,
+    id: 'ResponsiveSizeOneChecked',
+    label: 'ResponsiveSizeOneChecked',
+  },
 };
 
-export const FocusUnchecked: StoryFn<CheckboxInputProps> = Template.bind({});
-FocusUnchecked.args = {
-  id: 'FocusUnchecked',
-  label: 'Focus Unchecked',
-  isChecked: false,
+export const ResponsiveSizeTwoChecked: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeTwo.args,
+    ...Checked.args,
+    id: 'ResponsiveSizeTwoChecked',
+    label: 'ResponsiveSizeTwoChecked',
+  },
 };
 
-FocusUnchecked.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  canvas.getByRole('checkbox').focus();
+export const ResponsiveSizeThreeChecked: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeThree.args,
+    ...Checked.args,
+    id: 'ResponsiveSizeThreeChecked',
+    label: 'ResponsiveSizeThreeChecked',
+  },
 };
 
-export const FocusErrorChecked: StoryFn<CheckboxInputProps> = Template.bind({});
-FocusErrorChecked.args = {
-  id: 'FocusErrorChecked',
-  label: 'Focus Error Checked',
-  isChecked: true,
-  error: true,
+export const ResponsiveSizeOneIndeterminate: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeOne.args,
+    ...ResponsiveInderterminate.args,
+    id: 'ResponsiveSizeOneIndeterminate',
+    label: 'ResponsiveSizeOneIndeterminate',
+  },
 };
 
-FocusErrorChecked.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  canvas.getByRole('checkbox').focus();
+export const ResponsiveSizeTwoIndeterminate: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeTwo.args,
+    ...ResponsiveInderterminate.args,
+    id: 'ResponsiveSizeTwoIndeterminate',
+    label: 'ResponsiveSizeTwoIndeterminate',
+  },
 };
 
-export const FocusErrorUnchecked: StoryFn<CheckboxInputProps> = Template.bind({});
-FocusErrorUnchecked.args = {
-  id: 'FocusErrorUnchecked',
-  label: 'Focus Error Unchecked',
-  isChecked: false,
+export const ResponsiveSizeThreeIndeterminate: Story = {
+  ...Responsive,
+  args: {
+    ...ResponsiveSizeThree.args,
+    ...ResponsiveInderterminate.args,
+    id: 'ResponsiveSizeThreeIndeterminate',
+    label: 'ResponsiveSizeThreeIndeterminate',
+  },
 };
 
-FocusErrorUnchecked.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  canvas.getByRole('checkbox').focus();
+const Focus: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    canvas.getByRole('checkbox').focus();
+  },
+};
+export const FocusChecked: Story = {
+  ...Focus,
+  args: {
+    ...Checked.args,
+    id: 'FocusUnchecked',
+    label: 'Focus Checked',
+  },
+};
+
+export const FocusUnchecked: Story = {
+  ...Focus,
+  args: {
+    ...Unchecked.args,
+    id: 'FocusUnchecked',
+    label: 'Focus Unchecked',
+  },
+};
+
+const FocusError: Story = {
+  ...Focus,
+  args: {
+    id: 'FocusError',
+    label: 'Focus Error',
+    error: true,
+  },
+};
+
+export const FocusErrorChecked: Story = {
+  ...Focus,
+  args: {
+    ...FocusError.args,
+    ...Checked.args,
+    id: 'FocusErrorChecked',
+    label: 'Focus Error Checked',
+  },
+};
+
+export const FocusErrorUnchecked: Story = {
+  ...Focus,
+  args: {
+    ...FocusError.args,
+    ...Unchecked.args,
+    id: 'FocusErrorUnchecked',
+    label: 'Focus Error Unchecked',
+  },
 };

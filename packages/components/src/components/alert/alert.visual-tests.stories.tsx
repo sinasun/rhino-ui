@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Alert, AlertProps } from './alert';
 import { ALERT_VARIANTS } from './alert.constants';
 import { Box } from '../box/box';
@@ -12,45 +12,71 @@ const meta: Meta<typeof Alert> = {
 
 export default meta;
 
-const Template: StoryFn<AlertProps> = args => (
-  <Box>
-    {ALERT_VARIANTS.map(variant => (
-      <Alert
-        {...args}
-        className="m-bottom-md"
-        variant={variant}
-        key={variant}
-      />
-    ))}
-    <Box className="m-top-xl m-bottom-md">
-      <Heading size="md">isCompact</Heading>
+type Story = StoryObj<AlertProps>;
+const Default: Story = {
+  render: (args) => (
+    <Box>
+      {ALERT_VARIANTS.map((variant) => (
+        <Alert
+          {...args}
+          className="m-bottom-md"
+          variant={variant}
+          key={variant}
+        />
+      ))}
+      <Box className="m-top-xl m-bottom-md">
+        <Heading size="md">isCompact</Heading>
+      </Box>
+      {ALERT_VARIANTS.map((variant) => (
+        <Alert
+          {...args}
+          className="m-bottom-md"
+          variant={variant}
+          isCompact
+          key={`compact-${variant}`}
+        />
+      ))}
     </Box>
-    {ALERT_VARIANTS.map(variant => (
-      <Alert
-        {...args}
-        className="m-bottom-md"
-        variant={variant}
-        isCompact
-        key={`compact-${variant}`}
-      />
-    ))}
-  </Box>
-);
-
-export const AllProps: StoryFn<AlertProps> = Template.bind({});
-AllProps.args = {
-  title: 'Title Text',
-  message: 'Message text',
-  hasIcon: true,
-  isClosable: true,
+  ),
 };
 
-export const TitleOnly: StoryFn<AlertProps> = Template.bind({});
-TitleOnly.args = {
-  title: 'Title Text Only',
+const TitleOnly: Story = {
+  ...Default,
+  args: {
+    title: 'Title Text Only',
+  },
 };
 
-export const MessageOnly: StoryFn<AlertProps> = Template.bind({});
-MessageOnly.args = {
-  message: 'Message text only',
+const MessageOnly: Story = {
+  ...Default,
+  args: {
+    message: 'Message text only',
+  },
 };
+
+const hasIcon: Story = {
+  ...Default,
+  args: {
+    hasIcon: true,
+  },
+};
+
+const isClosable: Story = {
+  ...Default,
+  args: {
+    isClosable: true,
+  },
+};
+
+export const AllProps: Story = {
+  ...Default,
+  args: {
+    ...TitleOnly.args,
+    ...MessageOnly.args,
+    ...hasIcon.args,
+    ...isClosable.args,
+  },
+};
+
+export { TitleOnly };
+export { MessageOnly };
