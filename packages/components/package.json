@@ -122,7 +122,7 @@
     "resolve-url-loader": "^3.1.5",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-styles": "^3.14.1",
-    "sass": "^1.71.0",
+    "sass": "^1.71.1",
     "sass-loader": "^8.0.2",
     "sass-resources-loader": "^2.2.5",
     "size-limit": "^4.12.0",
